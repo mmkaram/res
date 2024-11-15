@@ -1,31 +1,42 @@
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \geometry{
-    top=0.6in,    % Set top margin
-    bottom=0.6in, % Set bottom margin
-    left=0.8in,   % Set left margin
-    right=0.8in   % Set right margin
+    top=0.75in,
+    bottom=0.75in, 
+    left=0.8in,
+    right=0.8in
 }
 \usepackage{multicol}
 \usepackage[
-    colorlinks=true, % Set to true to color the links
-    linkcolor=blue,  % Color for internal links
-    urlcolor=blue,   % Color for external links (URLs)
-    citecolor=blue,  % Color for citations
-    pdfborder={0 0 1} % Adds an underline to the links
-]{hyperref} % clickable hyperlinks
-\pagestyle{empty}  % Disable page numbering
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfborder={0 0 1}
+]{hyperref}
+\pagestyle{empty}
 
 % Adjust line spacing for the document
-\renewcommand{\baselinestretch}{0.9}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Reduce spacing for itemize globally
+\makeatletter
+\renewcommand{\@listi}{
+    \setlength{\itemsep}{0.001em}   % Adjust space between list items
+    \setlength{\topsep}{0.02em}    % Adjust space between list and surrounding content
+    \setlength{\parsep}{-10pt }      % Remove space between paragraphs in list items
+    \setlength{\parskip}{0pt}
+}
+\makeatother
 
 \begin{document}
 
 % First line with name, centered and bold
 \begin{center}
-    {\large \textbf{Mahdy M. Karam}} \\[0.1em]  % Adjust the space between lines
-    \small
+    {\LARGE \textbf{Mahdy M. Karam}} \\[0.25em]
+    \normalsize
     mahdykaram@outlook.com $ \cdot $ 
     \href{https://mmkaram.github.io}{Portfolio} $ \cdot $ 
     \href{https://www.linkedin.com/in/mahdykaram}{LinkedIn} $ \cdot $ 
@@ -34,70 +45,57 @@
 \end{center}
 
 % Experience section
+\vspace{-0.75em}
 \noindent
 \textbf{Experience} \\
-\rule{\textwidth}{0.4pt} % Draws a line of width \textwidth and thickness 0.4pt
+\rule{\textwidth}{0.5pt}
 
-\textbf{PlusOne Health Expert, Cairo, Egypt (Jun 2022-Aug 2022)} - \textit{Software Engineering Intern}
+\textbf{PlusOne Health Expert, Cairo, Egypt (Jun 2022-Aug 2022)} \\
+\textit{Software Engineering Intern}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{0pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item Implemented a cloud storage system using Google Healthcare for management of patient info and medical imaging files.
-    \item Integrated the Google Healthcare API into the OHIF medical imaging viewer and added Arabic language support.
-    \item Created a front-end system using React.js, catering to the needs of both users and medical experts.
+    \item Implemented a cloud storage system using Google Healthcare for patient info and medical imaging files.
+    \item Integrated the Google Healthcare API into the OHIF medical imaging viewer, adding Arabic language support.
+    \item Created a front-end system using React.js for users and medical experts.
 \end{itemize}
 
-\textbf{SigmaFit Egypt, Cairo, Egypt (Jul 2023-Aug 2023)} - \textit{Research and Development Intern}
+\textbf{SigmaFit Egypt, Cairo, Egypt (Jul 2023-Aug 2023)} \\
+\textit{Research and Development Intern}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{-1pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item Conducted research on existing tech-wear startups, discerning market viability and user acquisition.
-    \item Acquired a comprehensive understanding of the mech e principles used in the development of sports analytics products.
+    \item Researched tech-wear startups, assessing market viability and user acquisition.
+    \item Gained a comprehensive understanding of mechanical engineering principles for sports analytics products.
 \end{itemize}
 
-\textbf{EPS EV, Kirkland, WA, USA (Apr 2021-Jun 2024)} - \textit{Project Manager}
+\textbf{EPS EV, Kirkland, WA, USA (Apr 2021-Jun 2024)} \\
+\textit{Project Manager}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{-1pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item Ordered parts and contacted EV conversion companies to begin converting a 2007 Mazda Miata into an electric vehicle.
-    \item Led the Electronic Control Unit recalibration process and spearheaded the development of the infotainment system.
-    \item Onboarded and delegated tasks for a team of 15 while leveraging their unique skills to achieve key milestones such as getting the car to drive on its own power in less than two years.
+    \item Managed parts orders and contacted companies for converting a 2007 Mazda Miata into an electric vehicle.
+    \item Led Electronic Control Unit recalibration and infotainment system development.
+    \item Directed a team of 15, achieving milestones like self-powered vehicle driving in under two years.
 \end{itemize}
 
 % Projects section
+\vspace{-0.75em}
 \noindent
 \textbf{Projects} \\
-\rule{\textwidth}{0.4pt} % Draws a line of width \textwidth and thickness 0.4pt
+\rule{\textwidth}{0.5pt}
 
 \textbf{Squash AI (Dec 2022-Present)}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{-1pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item Implemented advanced computer vision techniques for ball tracking in squash gameplay videos, achieving 90\% tracking accuracy on a ball with a diameter of 39.5 mm (1.56”) with a top speed of 267.151 km/h (166 mph) from 12 feet away.
-    \item Contacted experts to optimize computer vision algorithms for ball and player tracking, enhancing performance.
-    \item Writing Squash AI’s mobile app with Java and Swift, providing real-time feedback and performance tracking to improve players' strategies in matches and track improvement in training with a standard smartphone camera.
+    \item Developed advanced computer vision techniques for ball tracking in squash gameplay videos with 90\% accuracy.
+    \item Contacted experts to optimize algorithms for ball and player tracking, improving performance.
+    \item Building Squash AI’s mobile app in Java and Swift for real-time feedback and training analysis.
 \end{itemize}
 
-\textbf{Railsy (March 2024-Present)}
+\textbf{Railsy (Mar 2024-Present)}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{-1pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item CLI tool that leverages the mail.tm API generate temporary emails and check their incoming messages.
-    \item Published on the official Rust package manager index, crates.io, with 110 downloads (as of 2024/03/13).
+    \item Developed a CLI tool leveraging the mail.tm API to generate temporary emails and check messages.
+    \item Published the tool on crates.io, achieving 110 downloads as of March 2024.
 \end{itemize}
 
-\textbf{0K-Engine (December 2024-Present)}
+\textbf{0K-Engine (Dec 2024-Present)}
 \begin{itemize}
-    \small % Makes the font size smaller for the list
-    \setlength{\itemsep}{-1pt} % Reduces space between list items
-    \setlength{\parskip}{0pt} % Reduces space between paragraphs
-    \item Developing a chess engine concurrently in C++ and Rust, leveraging prebuilt chess libraries for move generation while implementing custom algorithms for optimal move selection.
-    \item Utilizing optimization methods to address the intricate challenges embedded in chess engine development, showcasing the ability to efficiently tackle compute and memory-intensive problems.
+    \item Developing a chess engine in C++ and Rust using prebuilt libraries for move generation and custom algorithms for move selection.
+    \item Applying optimization methods to solve computational challenges in chess engine development.
 \end{itemize}
 
 \end{document}
